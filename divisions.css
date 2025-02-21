@@ -1,0 +1,43 @@
+.c1 {
+    background: linear-gradient(45deg,red,blue);
+}
+
+#id1 {
+    background: linear-gradient(45deg,yellow,pink);
+}
+
+.c2 {
+    background: linear-gradient(45deg,green,yellow);
+}
+
+.c1:hover {
+    width: 27%;
+    background: linear-gradient(45deg,black,purple);
+}
+
+#id1:hover {
+    width: 27%;
+    background: linear-gradient(90deg,green,purple);
+}
+
+.c2:hover {
+    display: none;
+}
+
+div {
+    border: 1px solid gray;
+    width: 25%;
+    display: inline-block;
+    padding: 20px;
+    margin: 20px;
+    border-radius: 20px;
+    color: white;
+}
+
+h2 {
+    text-align: center;
+}
+
+p {
+    text-align: justify;
+}
