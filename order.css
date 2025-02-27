@@ -1,0 +1,21 @@
+ul {
+    background-color: yellow;
+    width: 15%;
+    display: inline-block;
+    margin: 20px;
+    border: 1px solid red;
+    border-radius: 200px;
+}
+
+li {
+    background-color: red;
+    padding: 10px;
+    margin: 10px;
+    color: white;
+    border: 2px solid white;
+    border-radius: 10px;
+}
+
+li:hover {
+    background-color: aquamarine;
+}
