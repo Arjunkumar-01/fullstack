@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Variables</title>
+    </head>
+
+    <body>
+        <script>
+            //number
+            //we can assign number in 5 ways
+            //1) decimal 2) float 3) hexadecimal 4) octal 5) binary
+            //hexadecimal prefux with 0x
+            //octal prefix with 0o
+            //binary prefix with 0b
+            //hexadecimal, octal and binary converts to decimal
+
+            var decimal = 100;
+            document.write(decimal, "<br>");
+
+            var fractional = 100.12345;
+            document.write(fractional, "<br>");
+
+            var hexadecimal = 0x12345;
+            document.write(hexadecimal, "<br>");
+
+            var octal = 0o123;
+            document.write(octal, "<br>");
+
+            var binary = 0b1010;
+            document.write(binary, "<br>");
+            document.write("-------------------------------", "<br>");
+
+            var num1 = 200;
+            var num2 = 100;
+            var addition = num1 + num2;
+            document.write("Addition: ", addition, "<br>");
+
+            //subtraction
+            var subtraction  = num1 - num2;
+            document.write("Subtraction: ", subtraction, "<br>");
+
+            //multiplication
+            var multiplication = num1*num2;
+            document.write("Multiplication: ", multiplication, "<br>");
+
+            //square of num1
+            var sqrofnum1 = num1*num1;
+            document.write("Square of Num1: ", sqrofnum1, "<br>");
+
+            //cube of num2
+            var cubeofnum2 = num2*num2;
+            document.write("Cube of Num2: ", cubeofnum2, "<br>");
+
+            //string
+            //collection of characters called as string
+            //1) double quotes ("")
+            //2) single quotes ('')
+            //3) backtick (``)
+            //backtick (``) technically called as "template literal" - Interview Question
+            //template literal introduced in ES6 Version
+            /*
+                Advantages of template literal
+                1) easily we can concat variables
+                2) easily we can define multiline string
+            */
+
+            var sub = "FNS !!!";
+            var wish = `Welcome to ${sub}`;
+            document.write(wish, `<br>`);
+
+            /*
+                boolean
+                *******
+                boolean datatype supports
+                1) true
+                2) false
+            */
+
+            var flag = true;
+            var flag1 = false;
+            flag?document.write(`FNS !!!`, `<br>`):document.write(`JS !!!`, `<br>`);
+            flag1?document.write(`FNS !!!`, `<br>`):document.write(`JS !!!`, `<br>`);
+            !flag?document.write(`FNS !!!`, `<br>`):document.write(`JS !!!`, `<br>`);
+            !flag1?document.write(`FNS !!!`, `<br>`):document.write(`JS !!!`, `<br>`);
+
+            /*
+                undefined
+                *********
+                    variable declared but value not assigned called as undefined
+                    For undefined, external intilization not required
+                    undefined with arithmatic operations, then result will be NaN (Not an Number)
+
+                Differences between undefined and null - Interview Question
+            */
+
+            var x;
+            document.write(x, `<br>`);
+            document.write(x+10, `<br>`);
+            document.write(x/10, `<br>`);
+
+            /* 
+                null
+                ****
+                    null is the primitive datatype 
+                    null representing empty value / blank value
+                    In arithmatic operations, null value converts to '0'
+                    external intilization is mandatory
+            */
+
+            var y = null;
+            document.write(y, `<br>`);
+            document.write(y+10, `<br>`);
+            document.write(y/10, `<br>`);
+
+            /*
+                bigint
+                ******
+                    bigint datatype introduced in ES6 version
+                    bigint datatype suffix with 'n'
+                    It is used to represent / store large numbers
+                    Range: 2^53 - 1 to -2^53 - 1
+            */
+
+            var large = 123456789123456789123456789123456789123456789123456789123456789123456789123456789123456789123456789123456789123456789123456789123456789123456789123456789123456789123456789123456789123456789123456789123456789123456789123456789123456789123456789123456789123456789n;
+            document.write(large, `<br>`);
+
+            /*
+                symbol
+                ******
+                    symbol datatype is used to hide the identifiers
+                    we can achieve security by using symbol datatype
+            */
+
+            var secured = Symbol(100);
+            document.write(secured);
+
+            /*
+                what are the differences between undefined and null? - Interview
+
+                    undefined                       null
+                -------------------------------------------------------------------------------------------------
+                undefined is the primitive      null also primitive datatype 
+                datatype
+
+                external intilization not       external initialization mandatory
+                required
+
+                undefined with arithmatic       In arithmatic operations, null values are converted to '0' 
+                operations then result will
+                be NaN(Not an Number)
+                ---------------------------------------------------------------------------------------------------
+            */
+        </script>
+    </body>
+</html>

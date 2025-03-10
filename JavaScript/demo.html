@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>JavaScript Basics</title>
+    </head>
+
+    <body>
+        <script>
+            
+            console.log("Debugging Soon...!");
+            console.table([10,20,30,40,50]);
+
+            document.write("Welcome to JavaScript", "<br>");
+            document.write(10+10, "<br>");                //20
+            document.write(10+ +"10", "<br>");
+            document.write(10 - "10", "<br>");
+            document.write(10 * "10", "<br>");
+            document.write(10 / "10", "<br>");
+            document.write(10 / "0", "<br>");             //Infinity
+            document.write(10 / "A", "<br>");             //NaN (Not an Number)
+            document.write(10+5/10-5, "<br>");            //BODMAS
+            document.write((10+5)/(10-5), "<br>");
+
+            
+            //true --- 1
+            //false --- 0
+            document.write(true + true, "<br>");
+            document.write(1 + true, "<br>");
+            document.write(true/false, "<br>");  
+            document.write("1" + true, "<br>");            //1true
+            document.write("10" - 9 + "10", "<br>");       //110
+            document.write("10" * 10 - 8 + "5", "<br>");   //925
+
+
+            document.write(9>8>7, "<br>");     //false
+            document.write(1<2<3, "<br>");     //true
+
+
+            //=  (assignment)
+            //==  (comparision)
+            //===  (strict comparision)
+            document.write(10 == "10", "<br>");
+            document.write(10 === "10", "<br>");
+            document.write(10 == "ten", "<br>");
+            document.write(10 === "ten", "<br>");
+            document.write(0.1+0.2, "<br>");              //0.30000000000000004
+            document.write(0.1+0.2 == 0.3, "<br>");
+            document.write(0.1+0.2 === 0.3, "<br>");
+
+            //Ternary Operator
+            1<2<3 ? document.write("Hello, FNS," , "<br>") : document.write("Hi, FNS" ,"<br>");
+            !(1<2<3) ? document.write("Hello, FNS," , "<br>") : document.write("Hi, FNS" ,"<br>");
+
+        </script>
+    </body>
+</html>
