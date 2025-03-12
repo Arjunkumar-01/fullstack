@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Form</title>
+</head>
+<body>
+    <fieldset>
+        <legend>LOGIN FORM</legend>
+        <input type="text" id="uname" placeholder="Enter User Name">
+        <br><br>
+        <input type="password" id="upwd" placeholder="Enter Password">
+        <br><br>
+        <button onclick="login()">Login</button>
+        <br><br>
+        <p id="res"></p>
+    </fieldset>
+    <script>
+        let login = () => {
+            let x = document.getElementById("uname").value;
+            let y = document.getElementById("upwd").value;
+
+            x == "fns" && y == "fns@123" ? document.getElementById("res").innerHTML = "Login Succesful" : document.getElementById("res").innerHTML = "Login Failed";
+        }
+    </script>
+</body>
+</html>

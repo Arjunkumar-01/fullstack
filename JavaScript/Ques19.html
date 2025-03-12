@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Salary</title>
+</head>
+<body>
+    <fieldset style="width:13.5%">
+        <legend>Salary</legend>
+        <input type="number" id="asal" placeholder="Enter Annual Salary">
+        <br><br>
+        <input type="number" id="msal" placeholder="Monthly Salary">
+        <br><br>
+        <button onclick="calculate()">Calculate</button>
+    </fieldset>
+    <script>
+        let calculate = () => {
+            let asal = document.getElementById("asal").value;
+            let msal = asal/12;
+            document.getElementById("msal").value = msal;
+        }
+    </script>
+</body>
+</html>

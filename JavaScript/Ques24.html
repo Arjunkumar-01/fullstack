@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Cost</title>
+    <style>
+    fieldset {
+        width: 13.5%;
+    }
+
+        div {
+            display: flex;
+            gap: 20px;
+        }
+    </style>
+</head>
+<body>
+    <fieldset>
+        <legend>Product Details</legend>
+        <input type="text" id="pname" placeholder="Enter Product Name">
+        <br><br>
+        <input type="number" id="pcost" placeholder="Enter Product Cost">
+        <br><br>
+        <input type="number" id="gst" placeholder="Enter GST%">
+        <br><br>
+        <input type="number" id="gstamt" placeholder="GST Amount">
+        <br><br>
+
+        <div>
+            <button onclick="gst_amt()">GST Amt</button>
+            <button onclick="final_cost()">Final Cost</button>
+        </div>
+        <br>
+
+        <input type="number" id="famt" placeholder="Final Cost">
+    </fieldset>
+
+    <script>
+        let pcost, gstamt;
+
+        let gst_amt = () => {
+            let pname = document.getElementById("pname").value;
+            pcost = parseInt(document.getElementById("pcost").value);
+            let gst = parseInt(document.getElementById("gst").value);
+
+            gstamt = (pcost) * (gst/100);
+            document.getElementById("gstamt").value = gstamt;
+        }
+
+        let final_cost = () => {
+            let famt = pcost+gstamt;
+            document.getElementById("famt").value = famt;
+        }
+
+    </script>
+</body>
+</html>

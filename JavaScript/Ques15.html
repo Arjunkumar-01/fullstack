@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Full Name Form</title>
+</head>
+<body>
+    <fieldset style="width:13.5%">
+        <legend>FULLNAME FORM</legend>
+        <input type="text" id="firstname" placeholder="Enter First Name">
+        <br><br>
+        <input type="text" id="lastname" placeholder="Enter Last Name">
+        <br><br>
+        <input type="text" id="fullname" placeholder="FullName">
+        <br><br>
+        <button onclick="fullname()">FullName</button>
+    </fieldset>
+    <script>
+        let fullname = () => {
+            let x = document.getElementById("firstname").value;
+            let y = document.getElementById("lastname").value;
+            let name = x + y;
+            document.getElementById("fullname").value = name;
+        }
+    </script>
+</body>
+</html>

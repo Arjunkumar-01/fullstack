@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Swap</title>
+</head>
+<body>
+    <fieldset style="width:13.5%">
+        <legend>Swap</legend>
+        <input type="text" id="a1" placeholder="Enter 'a' value">
+        <br><br>
+        <input type="text" id="b1" placeholder="Enter 'b' value">
+        <br><br>
+        <button onclick="swap()">Swap</button>
+        <br><br>
+        <input type="text" id="a2" placeholder="After swapping 'a'">
+        <br><br>
+        <input type="text" id="b2" placeholder="After swapping 'b'">
+    </fieldset>
+    <script>
+        let swap = () => {
+            let x = document.getElementById("a1").value;
+            let y = document.getElementById("b1").value;
+            let x1 = y;
+            let y1 = x;
+            document.getElementById("a2").value = x1;
+            document.getElementById("b2").value = y1;
+        }
+    </script>
+</body>
+</html>

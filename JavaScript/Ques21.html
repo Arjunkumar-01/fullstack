@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product</title>
+</head>
+<body>
+    <fieldset style="width:13.5%">
+        <legend>Product</legend>
+        <input type="text" id="pname" placeholder="Enter Product Name">
+        <br><br>
+        <input type="number" id="pcost" placeholder="Enter Product Cost">
+        <br><br>
+        <input type="number" id="pquantity" placeholder="Product Quantity">
+        <br><br>
+        <button onclick="product()">Product</button>
+        <br><br>
+        <input type="number" id="fcost" placeholder="Final Cost">
+    </fieldset>
+    <script>
+        let product = () => {
+            let a = document.getElementById("pname").value;
+            let b = document.getElementById("pcost").value;
+            let c = document.getElementById("pquantity").value;
+            let res = b*c;
+            document.getElementById("fcost").value = res;
+        }
+    </script>
+</body>
+</html>
