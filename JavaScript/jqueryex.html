@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JQuery Example</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+</head>
+<body>
+    <script>
+
+        let get_employees = new Promise((resolve,reject)=>{
+            $.ajax({
+                "method" : "GET",
+                "url" : "https://reqres.in/api/users?page=2",
+                "success" : (posRes)=>{
+                    resolve(posRes);
+                },
+                "error" : (errRes)=>{
+                    reject(errRes);
+                }
+            })
+        });
+
+        let consume = async ()=>{
+            let res = await get_employees;
+            // console.log(res);
+            let {data} = res;
+            console.log(data);
+            document.write(`<table border="1"
+                                   align="center"
+                                   cellpadding="10px"
+                                   cellspacing="10px">
+                                <tr>
+                                    <th>id</th>
+                                    <th>first-name</th>
+                                    <th>last-name</th>
+                                    <th>email</th>
+                                    <th>avatar</th>
+                                </tr>`);
+            for(let element of data) {
+                document.write(`<tr>
+                                <td>${element.id}</td>
+                                <td>${element.first-name}</td>
+                                <td>${element.last-name}</td>
+                                <td>${element.email}</td>
+                                <td>
+                                    <img src=${element.avatar} width="100px">
+                                </td>
+                </tr>`)
+            }
+        }
+        consume();
+
+    </script>
+</body>
+</html>
