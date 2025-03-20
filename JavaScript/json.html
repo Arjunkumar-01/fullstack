@@ -403,11 +403,52 @@
     </script> -->
 
 
-    <script>
+    <!-- <script>
         let arr = [100,200,300];
         let [a,...b] = arr;     // b = [200,300]
         let [c,...d] = b;       // d = [300]
         let [x] = d;
+    </script> -->
+
+
+    <!-- <script>
+        let arr1 = [10,20,30,40,50];
+        let [a,b,...c] = arr1;
+        let [d,...e] = c;
+        let [f,...g] = e;
+        let [h] = [g];
+        document.write(a + `<br>` + b + `<br>` + d + `<br>` + f + `<br>` + h + `<br>`);
+    </script> -->
+
+
+    <!-- <script>
+        let obj = {
+            key1 : 100,
+            key2 : 200,
+            key3 : 300
+        };
+
+        let {key1, ...obj2} = obj;
+        let {key2, ...obj3} = obj2;
+        let {key3} = obj3;
+        document.write(key1 + `<br>` + key2 + `<br>` + key3 + `<br>`);
+    </script> -->
+
+
+    <script>
+        let obj1 = {
+            key1 : 100,
+            key2 : 200,
+            key3 : 300
+        };
+
+        // Object ----> Array
+        let arr = Object.entries(obj1);
+        console.log(arr);
+
+        // Array ----> Object
+        let obj = Object.fromEntries(arr);
+        console.log(obj);
     </script>
 </body>
 </html>

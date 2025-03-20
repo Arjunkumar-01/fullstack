@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arrays Manipulations</title>
+</head>
+<body>
+    <!-- <script>
+        let arr1 = [10,20,30,40,50];
+
+        let ele1 = arr1[0];
+        let ele2 = arr1[1];
+        let ele3 = arr1[2];
+        let ele4 = arr1[3];
+        let ele5 = arr1[4];
+        let ele6 = arr1[5];
+        let ele7 = arr1[6];
+        let ele8 = arr1[-1];
+
+        document.write(ele1 + `<br>` + ele2 + `<br>`  + ele3 + `<br>` + ele4 + `<br>` + ele5 + `<br>` + ele6 + `<br>` + ele7 + `<br>` + ele8);
+    </script> -->
+
+    <!-- <script>
+        let arr = [10,20,30,40,50];
+        let no_of_elements = arr.length;
+
+        document.write(no_of_elements + `<br>`);
+
+        arr.length = 3;
+        
+        let ele1 = arr[0];
+        document.write(ele1 + `<br>`);
+
+        let ele2 = arr[3];
+        document.write(ele2 + `<br>`);
+    </script> -->
+
+
+    <!-- <script>
+        let arr1 = [];
+
+        arr1[100] = 1000;
+        let no_of_elements = arr1.length;
+        document.write(no_of_elements + `<br>`);
+    </script> -->
+
+
+    <!-- <script>
+        // at() method
+        let arr = [100,200,300];
+
+        let ele1 = arr.at(0);
+        let ele2 = arr.at(-3);
+        document.write(ele1 + `<br>` + ele2 + `<br>`);
+
+        let ele3 = arr.at(1);
+        let ele4 = arr.at(-2);
+        document.write(ele3 + `<br>` + ele4 + `<br>`);
+
+        let ele5 = arr.at(2);
+        let ele6 = arr.at(-1);
+        document.write(ele5 + `<br>` + ele6 + `<br>`);
+    </script> -->
+
+
+    <!-- <script>
+        let sub = [`HTML`, `CSS`, `JavaScript`, `BootStrap`, `JQuery`];
+
+        // read elements using positive and negative indexes
+
+        let ele1 = sub.at(0);
+        let eleA = sub.at(-5);
+        document.write(ele1 + `<br>` + eleA + `<br>`);
+
+        let ele2 = sub.at(1);
+        let eleB = sub.at(-4);
+        document.write(ele2 + `<br>` + eleB + `<br>`);
+
+        let ele3 = sub.at(2);
+        let eleC = sub.at(-3);
+        document.write(ele3 + `<br>` + eleC + `<br>`);
+
+        let ele4 = sub.at(3);
+        let eleD = sub.at(-2);
+        document.write(ele4 + `<br>` + eleD + `<br>`);
+
+        let ele5 = sub.at(4);
+        let eleE = sub.at(-1);
+        document.write(ele5 + `<br>` + eleE + `<br>`);
+    </script> -->
+
+
+    <!-- <script>
+        let arr = [20,20,40];
+
+        arr.push(50);
+        console.log(arr);
+
+        arr.unshift(10);
+        console.log(arr);
+
+        arr.pop();
+        console.log(arr);
+
+        arr.shift();
+        console.log(arr);
+    </script> -->
+
+    
+    <!-- <script>
+        let subs = [`CSS`, `JavaScript`, `BootStrap`];
+
+        subs.push(`JQuery`);
+        console.log(subs);
+
+        subs.unshift(`HTML`);
+        console.log(subs);
+
+        subs.pop();
+        console.log(subs);
+
+        subs.shift();
+        console.log(subs);
+
+    </script> -->
+
+
+    <!-- <script>
+        let arr1 = [1,2,3,4,5];
+
+        let new_arr = arr1.map((element,index)=>{
+            return element*100;
+        });
+
+        console.log(new_arr);
+    </script> -->
+
+
+    <!-- <script>
+        let arr1 = [1000,2000,3000,4000,5000];
+
+        let new_arr = arr1.map((element,index)=>{
+            return element/1000;
+        });
+        console.log(new_arr);
+
+        // output = [1,2,3,4,5];
+    </script> -->
+
+    <!-- <script>
+        let arr1 = [1,2,3,4,5];
+
+        let new_arr = arr1.map((element,index)=>{
+            switch(index) {
+                case 0: 
+                    return element;
+
+                case 1: 
+                    return element*10;
+
+                case 2: 
+                    return element*100;
+
+                case 3: 
+                    return element*1000;
+
+                case 4:
+                    return element*10000;
+
+                default:
+                    return element;
+            }
+        });
+
+        console.table(new_arr);
+
+        // output = [1,20,300,4000,50000];
+    </script> -->
+
+
+    <!-- <script>
+        let arr1 = [{"eno":111,"ename":"Emp1"},
+                    {"eno":222,"ename":"Emp2"},
+                    {"eno":333,"ename":"Emp3"}];
+
+        let new_arr = arr1.map((element,index)=>{
+            switch(index) {
+                case 0:
+                    return {...element, "esal":10000};
+
+                case 1: 
+                    return {...element, "esal":20000};
+
+                case 2:
+                    return {...element, "esal":30000};
+
+                default: 
+                    return element;
+            }
+        });
+
+        console.table(new_arr);
+    </script> -->
+
+
+    <!-- <script>
+        let laptops = [{"pid":111,"pname":"Laptop1"},
+                       {"pid":222,"pname":"Laptop2"},
+                       {"pid":333,"pname":"Laptop3"}];
+
+        // assignment
+
+        let new_arr = laptops.map((element,index)=>{
+            switch(index) {
+                case 0:
+                    return {...element, "price":10000, "pimage":"https://ecommerceappln.s3.eu-north-1.amazonaws.com/laptop1.jpeg"};
+
+                case 1: 
+                    return {...element, "price":20000, "pimage":"https://ecommerceappln.s3.eu-north-1.amazonaws.com/laptop2.jpeg"};
+
+                case 3:
+                    return {...element, "price":30000, "pimage":"https://ecommerceappln.s3.eu-north-1.amazonaws.com/laptop3.jpeg"};
+
+                default: 
+                    return element;
+            }
+        });
+
+        console.table(new_arr);
+    </script> -->
+
+
+    <!-- <script>
+        let arr1 = [1,2,3,4,5];
+
+        let new_arr = arr1.filter((element,index)=>{
+            return element <= 3;
+        });
+
+        console.table(new_arr);
+    </script> -->
+
+
+    <!-- <script>
+        let arr1 = [100,200,300,400,500];
+        
+        let new_arr = arr1.filter((element,index)=>{
+            return element <= 300;
+        });
+
+        console.table(new_arr);
+    </script> -->
+
+
+    <!-- <script>
+        let emps = [{"eno":111,"ename":"Emp1","esal":10000},
+                    {"eno":222,"ename":"Emp2","esal":20000},
+                    {"eno":333,"ename":"Emp3","esal":30000},
+                    {"eno":444,"ename":"Emp4","esal":40000},
+                    {"eno":555,"ename":"Emp5","esal":50000}];
+
+        let new_arr = emps.filter((element,index)=>{
+            return element.esal < 30000;
+        });
+
+        console.table(new_arr);
+    </script> -->
+
+
+    <!-- <script>
+        let emps = [{"eno":111,"ename":"Emp1","esal":10000},
+                    {"eno":222,"ename":"Emp2","esal":20000},
+                    {"eno":333,"ename":"Emp3","esal":30000},
+                    {"eno":444,"ename":"Emp4","esal":40000},
+                    {"eno":555,"ename":"Emp5","esal":50000}];
+
+        let new_arr = emps.filter((element,index)=>{
+            return element.esal > 30000;
+        });
+
+        console.table(new_arr);
+    </script> -->
+
+
+    <!-- <script>
+        // reduce() function
+
+        let arr1 = [100,200,300,400,500];
+
+        let res= arr1.reduce((firstElement,nextElement)=>{
+            return firstElement+nextElement;
+        },15);   // accumulator
+
+        document.write(res + `<br>`);
+    </script> -->
+
+
+    <!-- <script>
+        let arr1 = [1,2,3,4,5];
+
+        let res = arr1.map((element,index)=>{
+            return element*100;
+        }).filter((element,index)=>{
+            return element < 300;
+        }).reduce((firstElement,nextElement)=>{
+            return firstElement+nextElement;
+        },200);
+
+        document.write(res + `<br>`);
+    </script> -->
+
+
+    <!-- <script>
+        let arr1 = [`FNS`, `TO`, `WELCOME`];
+
+        let res = arr1.reduceRight((firstElement,nextElement)=>{
+            return firstElement+nextElement;
+        });
+
+        document.write(res + `<br>`);
+    </script> -->
+
+
+    <!-- <script>
+        let arr1 = [10,20,30,40,50];
+
+        let res = arr1.every((element,index)=>{
+            return element < 5;
+        });
+
+        document.write(res + `<br>`);  // false
+    </script> -->
+
+
+    <!-- <script>
+        let arr1 = [10,20,30,40,50];
+
+        let res = arr1.some((element,index)=>{
+            return element <= 10;
+        });
+
+        document.write(res + `<br>`);  // true
+    </script> -->
+
+
+    <!-- <script>
+        let arr1 = [10,20,30,40,50];
+
+        // find() - returns element if present
+        let res = arr1.find((element,index)=>{
+            return element == 30;
+        });
+        document.write(res + `<br>`);
+
+        // includes() - returns true/false
+        let res1 = arr1.includes(30);
+        document.write(res1 + `<br>`);
+
+        let res2 = arr1.includes(300);
+        document.write(res2 + `<br>`);
+    </script> -->
+
+
+    <!-- <script>
+        let arr1 = [[1,2,3],[2],[3],[4],[5]];
+        let new_arr = arr1.flat(Infinity);
+        console.log(new_arr);
+    </script> -->
+
+
+    <!-- <script>
+        let arr1 = [[[[[[[[[[[[[1]]]]]]]]]]]], [[[[[[[[[[[2]]]]]]]]]]], [3,4]];
+        let new_arr = arr1.flat(Infinity);
+        console.log(new_arr);
+    </script> -->
+
+
+    <!-- <script>
+        let arr1 = [1,2,3];
+        let arr2 = [`one`, `two`, `three`];
+
+        let new_arr = arr1.flatMap((element,index)=>{
+            return [element,arr2[index]];
+        });
+
+        console.log(new_arr);
+    </script> -->
+
+
+    <script>
+        let arr1 = [1,2,3,4,5];
+        let arr2 = [`one`,`two`,`three`,`four`,`five`];
+        let arr3 = [`एक`,`दो`,`तीन`,`चार`,`पांच`];
+
+        // map() with flat()
+        let new_arr = arr1.map((element,index)=>{
+            return [element,arr2[index],arr3[index]];
+        }).flat(Infinity);
+
+        console.log(new_arr);
+
+        // flatMap()
+        let new_arr1 = arr1.flatMap((element,index)=>{
+            return [element,arr2[index],arr3[index]];
+        });
+
+        console.log(new_arr1);
+    </script>
+</body>
+</html
