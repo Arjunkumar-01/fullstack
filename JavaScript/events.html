@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Event Bubbling & Event Capturing</title>
+    </head>
+    <style>
+        #parent {
+            background-color: #f0f0f0;
+            padding: 50px;
+        }
+        
+        #child {
+            background-color: #d0d0d0;
+            padding: 50px;
+        }
+
+        #subchild {
+            background-color: #e0e0e0;
+            padding: 50px;
+        }
+    </style>
+    <body>
+        <div id="parent">
+            Parent-Div
+
+            <div id="child">
+                Child-Div
+
+                <div id="subchild">
+                    Subchild-Div
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Event Bubbling -->
+        <!-- <script>
+            let parent = document.getElementById('parent');
+            let child = document.getElementById('child');
+            let subchild = document.getElementById('subchild');
+
+            parent.addEventListener("click", function() {
+                console.log("Parent-Div");
+            });
+
+            child.addEventListener("click", function(event) {
+                console.log("Child-Div");
+                event.stopPropagation();
+            });
+
+            subchild.addEventListener("click", function() {
+                console.log("Subchild-Div");
+            });
+        </script> -->
+
+
+        <!-- Event Capturing -->
+         <!-- <script>
+            let parent = document.getElementById('parent');
+            let child = document.getElementById('child');
+            let subchild = document.getElementById('subchild');
+
+            parent.addEventListener("click", function() {
+                console.log("Parent-Div");
+            }, true);
+
+            child.addEventListener("click", function() {
+                console.log("Child-Div");
+            }, true);
+
+            subchild.addEventListener("click", function() {
+                console.log("Subchild-Div");
+            }, true);
+         </script> -->
+    </body>
+</html>
