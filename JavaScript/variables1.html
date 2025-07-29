@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Variables 1</title>
+    </head>
+
+    <body>
+        <!--    <script>
+                let x = 100;
+                let x= 200;
+                document.write(x, `<br>`);
+                    //var: 200
+                    //let: Uncaught SyntaxError: Identifier 'x' has already been declared
+                </script> -->
+
+
+        <!--    <script>
+                document.write(x);
+                let x = 100;
+                        //var: undefined (variable hoisting)
+                        //let: Uncaught ReferenceError: Cannot access 'x' before initialization
+            </script>  -->
+
+
+        <!--    <script>
+                function test_func() {
+                    var x = 100;
+                    {
+                        let y = 200;
+                            //let : block-scope
+                    }
+                    document.write(y);
+                        //var: functional-scope
+                }
+                test_func();
+            </script>  -->
+
+
+        <!--    <script>
+                let x = 100;
+                {
+                    let x = 200;
+                }
+                document.write(x);
+                    // var: (bug: global-polluting issue)
+                    // let : 100
+            </script>  -->
+
+
+        <!--    <script>
+                const x = 100;
+                x = 200;
+                document.write(x);
+                    // Uncaught TypeError: Assignment to constant variable.
+            </script>   -->
+
+
+            <script>
+                const arr = [10,20,30,40,50];
+                // arr = []   // Uncaught TypeError: Assignment to constant variable.
+                // arr = [100,200,300,400,500];  //Uncaught TypeError: Assignment to constant variable.
+
+                arr[0] = 100;
+                arr[4] = 500;
+                arr[5] = 600;
+
+                console.log(arr); //[100, 20, 30, 40, 500, 600]  
+            </script>
+    </body>
+</html>

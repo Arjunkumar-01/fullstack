@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Callback Functions</title>
+</head>
+<body>
+    <!--<script>
+        let func_one = (param1)=> {
+            param1();
+        }
+
+        func_one( ()=> {
+            document.write("Welcome to callbacks !!!");
+        } );
+    </script> -->
+
+    <!-- <script>
+        let fullstack = (param1, param2, param3) => {
+            param1();
+            let x = param2();
+            document.write(x, `<br>`);
+            let y = param3();
+            document.write(y, `<br>`);
+        }
+
+        fullstack( ()=>{
+            document.write(`ReactJS`, `<br>`);
+        }, ()=>{
+            return `Spring Boot`;
+        }, ()=>{
+            return `MongoDB`;
+        } )
+    </script> -->
+
+    <script>
+
+        let addition = (num,callback)=> {
+            callback(num+5, false);
+        }
+
+        let substraction = (num,callback)=>{
+            callback(num-3, false);
+        }
+
+        let multiplication = (num,callback)=>{
+            callback(num*2, false);
+        }
+
+        let division = (num,callback)=> {
+            callback(num/2, false);
+        }
+
+        addition(5, (addRes, flag)=>{
+            if(!flag) {
+                substraction(addRes, (subRes, flag)=>{
+                    if(!flag) {
+                        multiplication(subRes, (mulres,flag)=>{
+                            if(!flag) {
+                                division(mulres, (divres,flag)=>{
+                                    if(!flag) {
+                                        document.write(divres);
+                                    }
+                                });
+                            }
+                        });
+                    }
+                });
+            }
+        });
+
+    </script>
+</body>
+</html>

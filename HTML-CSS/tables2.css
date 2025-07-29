@@ -1,0 +1,28 @@
+table, th, td {
+    border: 1px solid gray;
+    text-align: center;
+}
+
+table {
+    width: 80%;
+    border-collapse: collapse;
+    margin: 50px auto;
+}
+
+th {
+    height: 40px;
+}
+
+tr:nth-child(odd) {
+    background-color: gray;
+    color: white;;
+}
+
+tr:nth-child(even) {
+    background-color: lightpink;
+    color: white;
+}
+
+tr:hover {
+    background-color: aqua;
+}

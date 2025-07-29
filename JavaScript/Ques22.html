@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Marks Average</title>
+</head>
+<style>
+    fieldset {
+        width: 19%;
+    }
+
+    div {
+        display: flex;
+        gap: 20px;
+        height: 21px;
+        margin-bottom: 0;
+    }
+</style>
+<body>
+    <fieldset>
+        <legend>TOTAL & AVERAGE</legend>
+        <input type="number" id="s1" placeholder="Enter Subject1 Marks">
+        <br><br>
+        <input type="number" id="s2" placeholder="Enter Subject2 Marks">
+        <br><br>
+        <input type="number" id="s3" placeholder="Enter Subject3 Marks">
+        <br><br>
+        <div>
+            <input type="number" id="tmarks" placeholder="Total Marks">
+            <br><br>
+            <button onclick="total()">Total</button>
+        </div>
+        <br>
+        <div>
+            <input type="number" id="avg" placeholder="Average Marks">
+            <br><br>
+            <button onclick="average()">Average</button>
+        </div>
+    </fieldset>
+    <script>
+        let total = () => {
+            let s1 = parseInt(document.getElementById("s1").value);
+            let s2 = parseInt(document.getElementById("s2").value);
+            let s3 = parseInt(document.getElementById("s3").value);
+
+            let total = s1+s2+s3;
+            document.getElementById("tmarks").value = total;
+        }
+
+        let average = () => {
+            let s1 = parseInt(document.getElementById("s1").value);
+            let s2 = parseInt(document.getElementById("s2").value);
+            let s3 = parseInt(document.getElementById("s3").value);
+
+            let average = (s1+s2+s3)/3;
+            document.getElementById("avg").value = average;
+        }
+    </script>
+</body>
+</html>

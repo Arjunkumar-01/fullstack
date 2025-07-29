@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Media Queries</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    </head>
+    <style>
+        .body {
+            padding: 0px;
+            margin: 0px;
+            box-sizing: border-box;
+        }
+
+        .parent {
+            height: 100vh;
+        }
+
+        .header {
+            height: 10vh;
+            background-color: lightblue;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .header__logo {
+            font-size: 3vw;
+        }
+
+        .header__menu {
+            display: flex;
+            gap: 20px;
+        }
+
+        .main {
+            height: 80vh;
+            display: flex;
+        }
+
+        .main__image {
+            flex: 1;
+            background-image: url("flipkart.png");
+            background-repeat: no-repeat;
+            background-position: center center;
+        }
+
+        .main__info {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .main__info_1 {
+            font-size: 3vw;
+        }
+
+        .main__info_2, .main__info_3 , .main__info_4, .main__info_5  {
+            font-size: 2vw;
+        }
+
+        .footer {
+            height: 10vh;
+            display: flex;
+            gap: 40px;
+            justify-content: flex-end;
+            align-items: center;
+            font-size: 30px;
+            background-color: lightblue;
+        }
+
+        @media(max-width: 600px)  {
+            .header__menu {
+                display: none;
+            }
+
+            .header {
+                justify-content: center;
+                align-items: center;
+            }
+
+            .header__logo {
+                font-size: 8vw;
+            }
+
+            .main {
+                flex-direction: column;
+            }
+
+            .main__info_2, .main__info_3 , .main__info_4, .main__info_5 {
+                display: none;
+            }
+
+            .main__info_1 {
+                font-size: 8vw;
+                text-align: center;
+            }
+
+            .footer {
+                justify-content: center;
+                align-items: center;
+            }
+        }
+    </style>
+
+    <body>
+        
+        <!-- Parent -->
+        <div class="parent">
+
+            <!-- Header -->
+            <div class="header">
+
+                <div class="header__logo">Finishing School<div>
+                <div class="header__menu">
+                    <a href="#"><i class="fa fa-home"></i>Home</a>
+                    <a href="#"><i class="fa fa-info"></i>About</a>
+                    <a href="#"><i class="fa fa-phone"></i>Contact</a>
+                    <a href="#"><i class="fa fa-sign-in"></i>Login</a>
+                </div>
+
+            </div>
+            
+            <!-- Main -->
+            <div class="main">
+                <div class="main__image"></div>
+
+                <div class="main__info">
+                    <p class="main__info_1">FullStack Java</p>
+                    <p class="main__info_2">Java</p>
+                    <p class="main__info_3">Hyderabad</p>
+                    <p class="main__info_4">Cyber Towers</p>
+                    <p class="main__info_5">500081</p>
+                </div>
+            </div>
+            
+            <!-- Footer -->
+            <div class="footer">
+                <i class="fa fa-facebook"></i>
+                <i class="fa fa-google"></i>
+                <i class="fa fa-twitter"></i>
+                <i class="fa fa-instagram"></i>
+            </div>
+
+        </div>
+
+    </body>
+</html>

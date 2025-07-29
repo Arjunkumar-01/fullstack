@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Manipulations</title>
+    <style>
+        .c1 {
+            color: forestgreen;
+        }
+
+        .c2 {
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <fieldset>
+        <legend>LOGIN FORM</legend>
+        <input type="text" id="username" placeholder="Enter Username"> <br><br>
+        <input type="password" id="password" placeholder="Enter Password"> <br><br>
+        <button onclick="login()">Login</button> <br><br>
+        <h1 id="res"></h1> 
+    </fieldset>
+
+    <script>
+        let login = ()=>{
+            let username = document.getElementById("username").value;
+            let password = document.getElementById("password").value;
+            let h1 = document.getElementById("res");
+            if(username == "fns" && password == "fns@123") {
+                h1.innerHTML = "Login Success";
+                if(h1.classList.contains("c2")) {
+                    h1.classList.remove("c2");
+                }
+                h1.classList.add("c1");
+            }else {
+                h1.innerHTML = "Login Failed";
+                if(h1.classList.contains("c1")) {
+                    h1.classList.remove("c1");
+                }
+                h1.classList.add("c2");
+            }
+        }
+    </script>
+</body>
+</html>

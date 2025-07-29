@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Manipulations</title>
+</head>
+<body>
+    <!-- <p id="my_para"></p>
+
+    <script>
+        document.getElementById("my_para").innerHTML = "Finishing School";
+    </script> -->
+
+
+    <!-- <input type="text" id="my_input" value="Finishing School">
+    <button onclick="changeText()">Change Text</button>
+
+    <script>
+        let changeText = ()=> {
+            document.getElementById("my_input").value = "FNS Feb Batch !!!";
+        }
+    </script> -->
+
+
+    <!-- <p></p>
+    <p></p>
+    <p></p>
+    <p></p>
+    <p></p>
+
+    <script>
+        let all_para = document.getElementsByTagName("p");
+        // all_para[0].innerHTML = "Finishing School 1";
+        // all_para[1].innerHTML = "Finishing School 2";
+        // all_para[2].innerHTML = "Finishing School 3";
+        // all_para[3].innerHTML = "Finishing School 4";
+        // all_para[4].innerHTML = "Finishing School 5";
+
+        // for(let p of all_para) {
+        //     p.innerHTML = "Finishing School";
+        // }
+    </script> -->
+
+
+    <!-- <h1></h1>
+    <h1></h1>
+    <h2></h2>
+    <h2></h2>
+    <h1></h1>
+    <h2></h2>
+
+    <script>
+        let all_h1 = document.getElementsByTagName("h1");
+        for(let h1 of all_h1) {
+            h1.innerHTML = "FNS";
+        }
+
+        let all_h2 = document.getElementsByTagName("h2");
+        for(let h2 of all_h2) {
+            h2.innerHTML = "Finishing School";
+        }
+    </script> -->
+
+
+    <!-- <p class="c1"></p>
+    <p class="c2"></p>
+    <p class="c1"></p>
+    <p class="c2"></p>
+
+    <script>
+        let all_c1 = document.getElementsByClassName("c1");
+        all_c1[0].innerHTML = "Finishing School1";
+        all_c1[1].innerHTML = "Finishing School1";
+
+        let all_c2 = document.getElementsByClassName("c2");
+        all_c2[0].innerHTML = "Finishing School3";
+        all_c2[1].innerHTML = "Finishing School4";
+    </script> -->
+
+
+    <!-- <h1 class="c1"></h1>
+    <h1 class="c1"></h1>
+    <h2 class="c2"></h2>
+    <h2 class="c2"></h2>
+    <h1 class="c1"></h1>
+    <h2 class="c2"></h2>
+
+    <script>
+        let all_h1 = document.getElementsByClassName("c1");
+        for(let h1 of all_h1) {
+            h1.innerHTML = "Finishing School";
+        }
+
+        let all_h2 = document.getElementsByClassName("c2");
+        for(let h2 of all_h2) {
+            h2.innerHTML = "Finishing School2";
+        }
+    </script> -->
+
+
+    <!-- <p></p>
+    <p></p>
+    <p></p>
+    <p class="c1"></p>
+    <p class="c1"></p>
+    <p class="c1"></p> -->
+
+    <!-- <script>
+        let first_p = document.querySelector("p");
+        first_p.innerHTML = "Finishing School";
+
+        let first_c1 = document.querySelector(".c1");
+        first_c1.innerHTML = "Finishing School";
+    </script> -->
+
+    <!-- <script>
+        let all_p1 = document.querySelectorAll("p");
+        for(let p of all_p1) {
+            p.innerHTML = "Hello";
+        }
+
+        let all_c1 = document.querySelectorAll(".c1");
+        for(let p of all_c1) {
+            p.innerHTML = "Welcome";
+        }
+    </script> -->
+
+
+    <!-- <div id="my_div">
+
+    </div>
+
+    <script>
+        let my_div = document.getElementById("my_div");
+
+        let p = document.createElement("p");
+        p.innerText = "Hello";
+
+        my_div.appendChild(p);
+
+        let h1 = document.createElement("h1");
+        h1.innerText = "Finishing School";
+        my_div.insertBefore(h1,p);
+
+        let xerox_h1 = h1.cloneNode(true);
+        my_div.appendChild(xerox_h1);
+
+        my_div.removeChild(p);
+
+        let h2 = document.createElement("h2");
+        h2.innerText = "Welcome";
+        my_div.replaceChild(h2,xerox_h1);
+    </script> -->
+
+
+    <p></p>
+
+    <script>
+        let p = document.querySelector("p");
+
+        p.setAttribute("class","c1");
+
+        let res = p.getAttribute("class");
+        document.write(res);
+
+        p.removeAttribute("class");
+
+        let res1 = p.hasAttribute("class");
+        document.write(res1);
+    </script>
+
+</body>
+</html>

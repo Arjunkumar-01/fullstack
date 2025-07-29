@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arrays Manipulations - 1</title>
+</head>
+<body>
+    <!-- <script>
+        let arr1 = [10,20,30,40,50,60,70,80,90,100];
+
+        // delete 40,50
+        arr1.splice(3,2);
+        console.log(arr1);          // [10, 20, 30, 60, 70, 80, 90, 100]
+
+        // delete 80,90
+        arr1.splice(5,2);
+        console.log(arr1);          // [10, 20, 30, 60, 70, 100]
+
+        // delete 10
+        arr1.splice(0,1);
+        console.log(arr1);          // [20, 30, 60, 70, 100]
+
+        // delete 100
+        arr1.splice(4,1);
+        console.log(arr1);          // [20, 30, 60, 70]
+
+        // in place of 60, add 40,50
+        arr1.splice(2,0,40,50);
+        console.log(arr1);          // [20, 30, 40, 50, 60, 70]
+
+        // delete 20 amd add 10,20
+        arr1.splice(0,1,10,20);
+        console.log(arr1);          // [10, 20, 30, 40, 50, 60, 70]
+    </script> -->
+
+
+
+    <!-- <script>
+        let arr1 = [10,20,30,40,50,60,70,80,90,100];
+
+        console.log(arr1.slice(2,5));   // [30,40,50]
+
+        console.log(arr1.slice(0,1));   // [10]
+
+        console.log(arr1.slice(9));     // [100]
+
+        console.log(arr1.slice(5));     // [60,70,80,90,100]
+
+        console.log(arr1.slice(0,5));   // [10,20,30,40,50]
+    </script> -->
+
+
+    <!-- <script>
+        let arr1 = [10,20,30];
+
+        let arr2 = [40,50,60];
+
+        let arr3 = [...arr1, ...arr2];   // joining arrays
+
+        console.log(arr3);   // [10,20,30,40,50,60]
+    </script> -->
+
+
+    <!-- <script>
+        let arr1 = [10,20,30,40,50,60];
+            // [40,50,60,10,20,30]
+
+        let arr2 = arr1.splice((3));
+        
+        let arr3 = [...arr2, ...arr1];
+
+        console.log(arr3);
+
+    </script> -->
+
+
+    <!-- <script>
+        let arr1 = [10,20,30];
+
+        let new_arr = arr1.reverse();
+        console.log(new_arr);       // [30,20,10]
+    </script> -->
+
+
+    <!-- <script>
+        console.log(Array.from("Hello").reverse().toString().replace(",",""));      // ol,l,e,H
+        console.log(Array.from("HTML").reverse().toString().replace(/,/g,""));      // LMTH
+        console.log(Array.from("CSS").reverse().toString().replaceAll(",",""));     // SSC
+        console.log(Array.from("ReactJS").reverse().join(""));                      // SJtcaeR
+        console.log("JavaScript".split("").reverse().join(""));                     // tpircSavaJ 
+    </script> -->
+
+
+    <!-- <script>
+        let arr1 = [`HTML`,`CSS`,`JavaScript`,`BootStrap`,`JQuery`];
+        
+        let new_arr = arr1.map((element,index)=>{
+            return element.split("").reverse().join("");
+        });
+
+        console.log(new_arr);
+    </script> -->
+
+
+    <!-- <script>
+        let arr1 = [`HTML`,`CSS`,`JavaScript`,`BootStrap`,`JQuery`];
+
+        let new_arr = arr1.map((element,index)=>{
+            if(index % 2 == 0) {
+                return element.split("").reverse().join("");
+            }
+            else 
+                return element;
+        });
+
+        console.log(new_arr);
+    </script> -->
+
+
+    <!-- <script>
+        let str = ` Hello `;
+        console.log(str.length);    // 7
+        console.log(str.trimStart().length);    // 6
+        console.log(str.trimEnd().length);      // 6
+        console.log(str.trim().length);         // 5
+    </script> -->
+
+
+    <!-- <script>
+        let str = `FNS`;
+        console.log(str.padStart(6,"*").padEnd(9,"*"));     // ***FNS***
+    </script> -->
+
+
+    <!-- <script>
+        let str="JavaScript";
+
+        console.log(str.padStart(15,"#").padEnd(20,"#"));     // #####JavaScript#####
+    </script> -->
+
+
+    <!-- <script>
+        let arr1 = [10,10,10,10,10];
+
+        arr1.fill(20,1);
+        console.log(arr1);      // [10, 20, 20, 20, 20]
+
+        arr1.fill(30,2,3);
+        console.log(arr1);      // [10, 20, 30, 20, 20]
+
+        arr1.fill(40,3,4);
+        console.log(arr1);      // [10, 20, 30, 40, 20]
+
+        arr1.fill(50,4);
+        console.log(arr1);      // [10, 20, 30, 40, 50]
+    </script> -->
+
+
+    <!-- <script>
+        let arr1 = [10,50,20,40,30];
+
+        let new_arr = arr1.sort((num1,num2)=>{
+            return num1-num2;
+        });
+        console.log(new_arr);       // [10, 20, 30, 40, 50]
+
+        let new_arr1 = arr1.sort((num1,num2)=>{
+            return num2-num1;
+        });
+        console.log(new_arr);       // [50, 40, 30, 20, 10]
+    </script> -->
+
+
+    <!-- <script>
+        let arr1 = [10,50,20,40,30];
+
+        let new_arr = arr1.sort((num1,num2)=>{
+            return num1-num2;
+        });
+        let min1 = new_arr[0];          
+        let min2 = new_arr[1];          
+        console.log(min1);          // 10
+        console.log(min2);          // 20
+        console.log(new_arr);       // [10, 20, 30, 40, 50]
+
+        let new_arr1 = arr1.sort((num1,num2)=>{
+            return num2-num1;
+        });
+        let max1 = new_arr[0];
+        let max2 = new_arr[1];
+        console.log(max1);          // 50
+        console.log(max2);          // 40
+        console.log(new_arr1);      // [50, 40, 30, 20, 10]
+    </script> -->
+
+
+    <!-- <script>
+        let arr1 = [10,20,30,40,50];
+        let x = arr1.findIndex((element,index)=>{
+            return element == 30;
+        });
+        console.log(x);     // 2
+
+        let y = arr1.findIndex((element,index)=>{
+            return element == 50;
+        });
+        console.log(y);     // 4
+
+        let z = arr1.findIndex((element,index)=>{
+            return element == 10;
+        });
+        console.log(z);     // 0
+
+        let p = arr1.findIndex((element,index)=>{
+            return element == 40;
+        });
+        console.log(p);     // 3
+
+        let q = arr1.findIndex((element,index)=>{
+            return element == 100;
+        });
+        console.log(q);     // -1
+    </script> -->
+
+
+    <!-- <script>
+        let arr1 = [10,20,30,40,50];
+
+        // delete 30
+        arr1.splice(arr1.findIndex((element,index)=>{
+            element == 30;
+        }),1);
+        console.log(arr1);          // [10, 20, 30, 40]
+
+        // delete 10
+        arr1.splice(arr1.findIndex((element,index)=>{
+            return element == 10;
+        }),1);
+        console.log(arr1);          // [20, 30, 40]
+
+        // delete 20
+        arr1.splice(arr1.findIndex((element,index)=>{
+            return element == 20;
+        }),1);
+        console.log(arr1);          // [30, 40]
+
+        // delete 40
+        arr1.splice(arr1.findIndex((element,index)=>{
+            return element == 40;
+        }),1);
+        console.log(arr1);          // [30]
+
+        // delete 50
+        arr1.splice(arr1.findIndex((element,index)=>{
+            return element == 50;
+        }),1);
+        console.log(arr1);          // []
+    </script> -->
+
+
+    <!-- <script>
+        let laptops=[{"pid":111,"pname":"laptop1","price":10000},
+                     {"pid":222,"pname":"laptop2","price":20000},
+                     {"pid":333,"pname":"laptop3","price":30000},
+                     {"pid":444,"pname":"laptop4","price":40000},
+                     {"pid":555,"pname":"laptop5","price":50000}];
+
+        
+        // delete Laptop3 with the help of splice() and findIndex()
+
+        laptops.splice(laptops.findIndex((element,index)=>{
+            return element.pid == 333;
+        }),1);
+        console.table(laptops);
+    </script> -->
+
+
+    <!-- <script>
+        let str = `Hello `;
+        console.log(str.repeat(5));
+    </script> -->
+
+
+    <!-- <script>
+        // Removing duplicate elements
+        let arr1 = [10,20,10,30,40,10,20];
+
+        let new_arr = arr1.filter((element,index)=>{
+            return arr1.indexOf(element) == index;
+        });
+
+        console.log(new_arr);
+    </script> -->
+
+
+    <!-- <script>
+        let str = `Welcome to Fns`;
+        let arr = str.split(" ");
+        console.log(arr);           // ['Welcome', 'to', 'Fns']
+    </script> -->
+
+
+    <!-- <script>
+        let arr = [10,20,10,10,20,10];
+        console.log(arr.lastIndexOf(10));       // 5
+        console.log(arr.lastIndexOf(20));       // 4
+    </script> -->
+
+
+    <!-- <script>
+        let str = `Welcome to fns!!!`;
+
+        let portion1 = str.substring(0,7);
+        console.log(portion1);          // Welcome
+
+        let portion2 = str.substring(8,10);         // to
+        console.log(portion2);
+
+        let portion3 = str.substring(11);
+        console.log(portion3);          // fns!!!
+    </script> -->
+
+
+    <!-- <script>
+        let str = `welcome to fns!!!`;
+
+        let portion1 = str.substr(0,7);     // second parameter is the no of characters we want to print
+        console.log(portion1);          // welcome
+
+        let portion2 = str.substr(8,2);
+        console.log(portion2);          // to
+
+        let portion3 = str.substr(11,5);
+        console.log(portion3);          // fns!!
+    </script> -->
+
+
+    <!-- <script>
+        let arr1 = [10,20,30,40,50];
+
+        delete arr1[2];             // element is deleted but memory is not released
+        console.log(arr1);          // [10, 20, empty, 40, 50]
+        console.log(arr1.length);   // 5
+    </script> -->
+
+
+    <!-- <script>
+        let arr1 = [1,2,3,4,5,6,7,8,9,10];
+
+        arr1.copyWithin(3,6);           // 6 index to last index copied to index 3
+        console.log(arr1);              // [1, 2, 3, 7, 8, 9, 10, 8, 9, 10]
+    </script> -->
+
+
+    <script>
+        let arr1 = [1,2,3,4,5,6,7,8,9,10];
+
+        arr1.copyWithin(2,8);
+        console.log(arr1);              // [1, 2, 9, 10, 5, 6, 7, 8, 9, 10]
+    </script>
+</body>
+</html>

@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Forms with CSS</title>
+        <link rel="stylesheet" href="forms.css">
+    </head>
+
+    <body>
+        
+        <fieldset>
+            <legend>Registration</legend>
+            
+            <form name="regForm">
+            <table>
+
+                <!-- First Name -->
+                <tr>
+                    <td>
+                        First Name
+                    </td>
+
+                    <td>
+                        <input type="text" name="fname" placeholder="Enter First Name">
+                    </td>
+
+                    <td>
+                        <span>(***Enter valid First Name***)</span>
+                    </td>
+                </tr>
+
+                <!-- Last Name -->
+                <tr>
+                    <td>
+                        Last Name
+                    </td>
+
+                    <td>
+                        <input type="text" name="lname" placeholder="Enter Last Name">
+                    </td>
+
+                    <td>
+                        <span>(***Enter valid Last Name***)</span>
+                    </td>
+                </tr>
+
+                <!-- Email -->
+                <tr>
+                    <td>
+                        Email 
+                    </td>
+
+                    <td>
+                        <input type="email" name="useremail" placeholder="Enter Email">
+                    </td>
+
+                    <td>
+                        <span>(***Enter valid Email***)</span>
+                    </td>
+                </tr>
+
+                <!-- Password -->
+                <tr>
+                    <td>
+                        Password
+                    </td>
+
+                    <td>
+                        <input type="password" name="userpassword" placeholder="Enter Password">
+                    </td>
+
+                    <td>
+                        <span>(***Enter valid password***)</span>
+                    </td>
+                </tr>
+
+                <!-- Mobile Number -->
+                <tr>
+                    <td>
+                        Mobile Number
+                    </td>
+
+                    <td>
+                        <input type="tel" name="usermobile" placeholder="Enter Mobile Number">
+                    </td>
+
+                    <td>
+                        <span>(***Enter valid Mobile Number***)</span>
+                    </td>
+                </tr>
+
+                <!-- Age -->
+                <tr>
+                    <td>
+                        Age
+                    </td>
+
+                    <td>
+                        <input type="number" name="userage" placeholder="Enter Age">
+                    </td>
+
+                    <td>
+                        <span>(***Enter valid age***)</span>
+                    </td>
+                </tr>
+
+                <!-- Gender -->
+                <tr>
+                    <td>
+                        Gender
+                    </td>
+
+                    <td>
+                        <input type="radio" name="gender" value"male"> Male
+                        <input type="radio" name="gender" value="female"> Female
+                    </td>
+
+                    <td>
+                        <span>(***Choose gender***)</span>
+                    </td>
+                </tr>
+
+                <!-- Languages -->
+                <tr>
+                    <td>
+                        Languages
+                    </td>
+
+                    <td>
+                        <input type="checkbox" name="lag" value="c"> C lang
+                        <input type="checkbox" name="lang" value="c++"> C++ 
+                    </td>
+
+                    <td>
+                        <span>(***Select Languages***)</span>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td></td>
+
+                    <td>
+                        <input type="checkbox" name="lang" value="java"> Java
+                        <input type="checkbox" name="lang" value="python"> Python
+                    </td>
+
+                    <td></td>
+                </tr>
+
+                <!-- Nationality -->
+                <tr>
+                    <td>
+                        Nationality
+                    </td>
+
+                    <td>
+                        <select name="country">
+                            <option value="">---Select Country---</option>
+                            <option value="ind">India</option>
+                            <option value="usa">United States of America</option>
+                            <option value="rus">Russia</option>
+                            <option value="uk">United Kingdom</option>
+                        </select>
+                    </td>
+
+                    <td>
+                        <span>(***Choose Nationality***)</span>
+                    </td>
+                </tr>
+
+                <!-- DOB -->
+                <tr>
+                    <td>
+                        DOB
+                    </td>
+
+                    <td>
+                        <input type="date" name="userdob" value="dob">
+                    </td>
+
+                    <td>
+                        <span>(***Enter valid date of birth***)</span>
+                    </td>
+                </tr>
+
+                <!-- Color -->
+                <tr>
+                    <td>
+                        Color
+                    </td>
+
+                    <td>
+                        <input type="color" name="favcolor" value="color">
+                    </td>
+
+                    <td>
+                        <span>(***Choose valid color***)</span>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>
+                        <input type="submit" value="Register">
+                    </td>
+
+                    <td>
+                        <input type="reset" value="Cancel">
+                    </td>
+                </tr>
+
+            </table>
+            </form>
+        </fieldset>
+
+    </body>
+</html>

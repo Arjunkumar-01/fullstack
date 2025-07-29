@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>this keyword</title>
+</head>
+<body>
+    <!-- <script>
+        console.log(this);          // Window object
+    </script> -->
+
+
+    <!-- <script>
+        let obj1 = {
+            "name" : "FNS !!!",
+            "test_func" : function(){
+                document.write(this.name);
+            }
+        };
+        obj1.test_func();           // FNS !!!
+    </script> -->
+
+
+    <!-- <script>
+        let obj1 = {
+            "name" : "FNS !!!",
+            "test_func" : ()=>{
+                console.log(this.name);
+            }
+        };
+        obj1.test_func();          // undefined / empty
+    </script> -->
+
+
+    <!-- <script>
+        function func_one() {
+            console.log(this);
+        }
+        func_one();                // Window object
+    </script> -->/
+
+
+    <!-- <script>
+        "use strict"
+        function func_one() {
+            console.log(this);
+        }
+        func_one();                // undefined
+    </script> -->
+
+
+    <button id="btn1">Button1</button>
+    <script>
+        let btn1 = document.getElementById("btn1");
+        btn1.addEventListener("click", function(){
+            console.log(this);          // Button object
+        });
+    </script>
+</body>
+</html>

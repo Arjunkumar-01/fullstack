@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>CSS Flex2</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <style>
+            .parent {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+            }
+
+            .item1 {
+                width: 15vw;
+            }
+
+            .item2 {
+                display: flex;
+                gap: 20px;
+            }
+
+            a {
+                text-decoration: none;
+                font-size: 30px;
+                color: black;
+            }
+
+            a:hover {
+                color: orange;
+            }
+        </style>
+    </head>
+
+    <body>
+        
+        <div class="parent">
+
+            <img src="flipkart.png" class="item1">
+
+            <div class="item2">
+                <a href="#"><i class="fa fa-home"></i>Home</a>
+                <a href="#"><i class="fa fa-info"></i>About</a>
+                <a href="#"><i class="fa fa-shopping-cart"></i>Cart</a>
+                <a href="#"><i class="fa fa-sign-in"></i>Sign In</a>
+            </div>
+
+        </div>
+
+    </body>
+</html>

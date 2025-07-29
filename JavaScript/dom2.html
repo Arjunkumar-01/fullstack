@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Manipulations</title>
+</head>
+<body>
+    <!-- <button id="btn_one">Button1</button>
+
+    <script>
+        let btn_one = document.getElementById("btn_one");
+        btn_one.addEventListener("click", ()=>{
+            alert("Button1 Clicked");
+        });
+    </script> -->
+
+
+    <button id="my_btn">Button2</button>
+
+    <script>
+        let my_btn = document.getElementById("my_btn");
+        my_btn.addEventListener("click", test_func);
+
+        function test_func() {
+            console.log("Button2 Clicked");
+        }
+
+        setTimeout(function() {
+            my_btn.removeEventListener("click", test_func);
+        }, 5000);
+    </script>
+</body>
+</html>

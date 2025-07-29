@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Higher Order Functions</title>
+</head>
+<body>
+    <script>
+
+        let calculator = (num1,num2,callback)=>{
+            return callback(num1,num2);
+        }
+
+        let addition = (num1,num2)=>{
+            document.write(num1+num2,`<br>`);
+        }
+
+        let substraction = (num1,num2)=>{
+            document.write(num1-num2, `<br>`);
+        }
+
+        let multiplication = (num1,num2)=>{
+            document.write(num1*num2, `<br>`);
+        }
+
+        let division = (num1,num2)=>{
+            document.write(num1/num2, `<br>`);
+        }
+
+        calculator(100,200,addition);
+        calculator(200,100,substraction);
+        calculator(200,25,multiplication);
+        calculator(256,16,division);
+
+    </script>
+</body>
+</html>

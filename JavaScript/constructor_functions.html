@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Constructor Functions</title>
+</head>
+<body>
+    <!-- <script>
+
+        function class_one() {
+            this.var_one = `Hello`;
+            this.var_two = `Welcome`;
+        }
+
+        let obj = new class_one();
+        let x = obj.var_one;
+        let y = obj.var_two;
+        document.write(x,`<br>`);
+        document.write(y,`<br>`);
+
+    </script> -->
+
+    <!-- <script>
+
+        function class_two() {
+            this.p = `HTML`;
+            this.q = `CSS`;
+            this.r = `JavaScript`;
+            this.s = `ReactJS`;
+        }
+
+        let obj1 = new class_two();
+        let x = obj1.p;
+        let y = obj1.q;
+        let z = obj1.r;
+        let w = obj1.s;
+        document.write(x,`<br>`);
+        document.write(y,`<br>`);
+        document.write(z,`<br>`);
+        document.write(w,`<br>`);
+
+    </script> -->
+
+
+    <!-- <script>
+
+        function class_one() {
+            this.func_one = function() {
+                document.write(`func_one`);
+            }
+
+            this.func_two = function() {
+                return `func_two`;
+            }
+
+            this.func_three = function(param1) {
+                document.write(param1);
+            }
+
+            this.func_four = function(param1) {
+                return param1;
+            }
+        }
+
+        let obj = new class_one();
+        obj.func_one();
+        document.write(`<br>`);
+
+        let x = obj.func_two();
+        document.write(x,`<br>`);
+
+        obj.func_three(`func_three`);
+        document.write(`<br>`);
+
+        let y = obj.func_four(`func_four`);
+        document.write(y);
+
+    </script> -->
+
+
+    <!-- <script>
+
+        let class_one = function() {
+            this.var_one = `Hello`;
+            this.func_one = function() {
+                return `Welcome`
+            }
+        }
+
+        let obj = new class_one();
+        let x = obj.var_one;
+        document.write(x,`<br>`);
+        let y = obj.func_one();
+        document.write(y,`<br>`);
+
+    </script> -->
+
+
+    <!-- <script>
+
+        function class_one() {
+            this.var_one = `Hello`;
+            this.var_two = `Hi`;
+            this.func_one = function() {
+                return `FNS`;
+            }
+            this.func_two = function() {
+                document.write(`Cyber Towers`,`<br>`);
+            }
+        }
+
+        let obj = new class_one();
+        let x = obj.var_one;
+        document.write(x,`<br>`);
+        let y = obj.var_two;
+        document.write(y,`<br>`);
+        let z = obj.func_one();
+        document.write(z,`<br>`);
+        obj.func_two();
+
+    </script> -->
+
+
+    <!-- <script>
+
+        function class_one() {
+
+        }
+        class_one.prototype.num1 = 200;
+        class_one.prototype.num2 = 100;
+        class_one.prototype.func_one = function() {
+            document.write(`Hello`,`<br>`);
+        }
+        class_one.prototype.func_two = function() {
+            document.write(`FNS`,`<br>`);
+        }
+
+        let obj = new class_one();
+        let x = obj.num1;
+        let y = obj.num2;
+        let addition = x+y;
+        document.write(addition,`<br>`);
+
+        let sub = x-y;
+        document.write(sub,`<br>`);
+
+        obj.func_one();
+        obj.func_two();
+
+    </script> -->
+
+
+    <!-- <script>
+
+        function class_one() {}
+        class_one.prototype.num1 = 200;
+
+        function class_two() {}
+        class_two.prototype = Object.create(class_one.prototype);
+        class_two.prototype.num2 = 100;
+
+        function class_three() {}
+        class_three.prototype = Object.create(class_two.prototype);
+        class_three.prototype.num3 = 50;
+
+        let obj = new class_three();
+        let x = obj.num1;
+        let y = obj.num2;
+        let z = obj.num3;
+        document.write(x,`<br>`,y,`<br>`,z,`<br>`);
+
+    </script> -->
+
+
+    <!-- <script>
+
+        function class_one() {}
+        class_one.prototype.func_one = function() {
+            document.write(100,`<br>`);
+        }
+
+        function class_two() {}
+        class_two.prototype = Object.create(class_one.prototype);
+        class_two.prototype.func_two = function() {
+            return 200;
+        }
+
+        function class_three() {}
+        class_three.prototype = Object.create(class_two.prototype);
+        class_three.prototype.func_three = function() {
+            document.write(300,`<br>`);
+        }
+
+        function class_four() {}
+        class_four.prototype = Object.create(class_three.prototype);
+        class_four.prototype.func_four = function() {
+            return 400;
+        }
+
+        let obj = new class_four();
+
+        obj.func_one();
+
+        let x = obj.func_two();
+        document.write(x,`<br>`);
+
+        obj.func_three();
+
+        let y = obj.func_four();
+        document.write(y,`<br>`);
+
+    </script> -->
+
+</body>
+</html>

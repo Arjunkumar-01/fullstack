@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loan Details</title>
+    <style>
+        fieldset {
+            width: 13.5%;
+        }
+
+        div {
+            display: flex;
+            gap: 20px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <fieldset>
+        <legend>LOAN DETAILS</legend>
+        <input type="number" id="lamt" placeholder="Enter Loan Amount">
+        <br><br>
+        <input type="number" id="roi" placeholder="Enter Rate of Interest">
+        <br><br>
+        <input type="number" id="tenure" placeholder="Enter Tenure">
+        <br><br>
+        <input type="number" id="iamt" placeholder="Interest Amount">
+        <br><br>
+        <input type="number" id="famt" placeholder="Final Amount">
+        <br><br>
+
+        <div>
+            <button onclick="interest_amt()">Interest Amt</button>
+            <button onclick="final_amt()">Final Amt</button>
+        </div>
+    </fieldset>
+
+    <script>
+        let x, si;
+        let interest_amt = () => {
+            x = parseInt(document.getElementById("lamt").value);
+            let y = parseInt(document.getElementById("roi").value);
+            let z = parseInt(document.getElementById("tenure").value);
+            si = (x*y*z)/100;
+            document.getElementById("iamt").value = si;
+        }
+
+        let final_amt = () => {
+            let famt = x+si;
+            document.getElementById("famt").value = famt;
+        }
+    </script>
+
+</body>
+</html>
